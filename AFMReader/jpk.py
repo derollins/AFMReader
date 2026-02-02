@@ -269,7 +269,7 @@ def _load_jpk_tags(config_path: str | Path | None = None) -> dict[str, int]:
         Dictionary of JPK configuration options.
     """
     if config_path is None:
-        config_path = resources.files(__package__) / "default_config.yaml"  # type:ignore[assignment]
-    config = read_yaml(Path(config_path))  # type:ignore[arg-type]
+        config_path = resources.files(__package__) / "default_config.yaml"  # type: ignore[assignment]
+    config = read_yaml(Path(config_path))  # type: ignore[arg-type]
     logger.info(f"Configuration loaded from : {config_path}")
     return config["jpk"]
