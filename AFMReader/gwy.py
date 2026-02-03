@@ -75,11 +75,9 @@ def load_gwy(file_path: Path | str, channel: str) -> tuple[np.ndarray[Any, np.fl
             image = image * 1e9
             px_to_nm = px_to_nm * 1e9
         else:
-            raise ValueError(
-                f"Units '{units}' have not been added for .gwy files. Please add \
+            raise ValueError(f"Units '{units}' have not been added for .gwy files. Please add \
                 an SI to nanometre conversion factor for these units in _gwy_read_component in \
-                io.py."
-            )
+                io.py.")
 
     except FileNotFoundError:
         logger.info(f"[{filename}] File not found : {file_path}")
