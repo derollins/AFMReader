@@ -85,8 +85,9 @@ RESOURCES = BASE_DIR / "tests" / "resources"
             RESOURCES / "sample_0.spm",
             "Force",
             True,
-            "'Force' not in .spm channel list: ['Height Sensor', 'Peak Force Error', 'DMTModulus', 'LogDMTModulus', "
-            "'Adhesion', 'Deformation', 'Dissipation', 'Height']",
+            "'Force' not in .spm channel list: ['Height Sensor retrace', 'Peak Force Error retrace', "
+            + "'DMTModulus retrace', 'LogDMTModulus retrace', "
+            + "'Adhesion retrace', 'Deformation retrace', 'Dissipation retrace', 'Height trace']",
             id="'.spm' channel not found.",
         ),
         pytest.param(
